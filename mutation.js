@@ -7,22 +7,17 @@
 // Lastly, ["Alien", "line"], should return true because all of the letters in line are present in Alien.
 
 function mutation(arr) {
-  
-    for (let i = 0; i < arr[1].length; i++) {
-  
-       for (let j = 0; j < arr[0].length; j++) {
-           
-          if (arr[1][i] == arr[0][j]) {
-              break
-          }
-  
-          if (j ==  arr[0].length - 1) {
-              return false
-          }
-        }
-        
+  for (let i = 0; i < arr[1].length; i++) {
+    for (let j = 0; j < arr[0].length; j++) {
+      if (arr[1][i].toLowerCase() == arr[0][j].toLowerCase()) {
+        break;
+      }
+      if (j == arr[0].length - 1) {
+        return false;
+      }
     }
-    return true;
   }
-  
-  mutation(["hello", "herllo"]);
+  return true;
+}
+
+mutation(["hello", "herllo"]);
